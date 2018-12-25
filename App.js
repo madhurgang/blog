@@ -1,58 +1,25 @@
 import React from 'react';
-import { Button, Card, Title, Paragraph, Appbar, FAB } from 'react-native-paper'
+import { Appbar, FAB } from 'react-native-paper'
 import { View, Text, FlatList, StyleSheet } from 'react-native'
 import axios from 'axios'
+import PostCard from './comp/PostCard';
+import { createStackNavigator, createAppContainer } from 'react-navigation'
+import AddNewPost from './screens/AddNewPost';
 
-const PostCard = (props) => {
-  return (
-    <Card>
-      <Card.Content>
-        <Title>Author ka naam</Title>
-      </Card.Content>
-      <Card.Cover source={{ uri: props.singlePost.image }} />
-      <Card.Content>
-        <Paragraph>{props.singlePost.desc}</Paragraph>
-      </Card.Content>
-      <Card.Actions>
-        <Button icon="thumb-up" color='green'>2</Button>
-        <Button icon="thumb-down" color='red'>0</Button>
-      </Card.Actions>
-    </Card>
-  )
-}
+const currentUserId = 2
 
-export default class App extends React.Component {
+class App extends React.Component {
+
+  static navigationOptions = {
+    title: 'Home'
+  }
 
   state = {
-    posts: []
+    posts: [],
+    currentUser: {}
   }
 
-  render() {
-    return (
-      <View style={{ flex: 1 }}>
-        <Appbar>
-          <Appbar.Header><Text style={{ color: 'white' }}>My Special Blog</Text></Appbar.Header>
-        </Appbar>
-
-        <FlatList
-          style={{ flex: 1 }}
-          data={this.state.posts}
-          keyExtractor={(item, index) => item.id}
-          renderItem={({ item }) => <PostCard singlePost={item} />}
-        />
-
-        <FAB
-          small
-          style={styles.fab}
-          icon="add"
-          onPress={() => console.log('Pressed')}
-        />
-
-      </View>
-    );
-  }
-
-  componentDidMount = () => {
+  fetchPosts = () => {
     const url = 'http://localhost:3000/posts'
     axios.get(url)
       .then(res => {
@@ -61,6 +28,53 @@ export default class App extends React.Component {
         })
       })
       .catch(err => console.log('err:', err))
+  }
+
+  fetchCurrentUserDetails = () => {
+    // get current used id from async storage
+    const url = `http://localhost:3000/users/${currentUserId}`
+    axios.get(url).then(
+      res => this.setState({
+        currentUser: res.data
+      })
+    ).catch(err => console.log('err:', err))
+
+  }
+
+  render() {
+    if (typeof (this.state.currentUser.id) === 'undefined') {
+      return <Text>Loading ...</Text>
+    }
+    else {
+      return (
+        <View style={{ flex: 1 }}>
+          <Appbar>
+            <Appbar.Header><Text style={{ color: 'white' }}>My Special Blog</Text></Appbar.Header>
+          </Appbar>
+
+          <FlatList
+            style={{ flex: 1 }}
+            data={this.state.posts}
+            keyExtractor={(item, index) => item.id}
+            renderItem={({ item }) =>
+              <PostCard currentUser={this.state.currentUser} singlePost={item} />}
+          />
+
+          <FAB
+            small
+            style={styles.fab}
+            icon="add"
+            onPress={() => this.props.navigation.navigate('NewPost', { currentUserId: currentUserId })}
+          />
+        </View>
+      );
+    }
+
+  }
+
+  componentDidMount = () => {
+    this.fetchPosts()
+    this.fetchCurrentUserDetails()
   }
 }
 
@@ -73,3 +87,10 @@ const styles = StyleSheet.create({
     bottom: 0,
   },
 })
+
+const AppNavigator = createStackNavigator({
+  Home: App,
+  NewPost: AddNewPost
+})
+
+export default createAppContainer(AppNavigator)
