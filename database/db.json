@@ -1,0 +1,61 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "manas",
+      "password": "manas123",
+      "postsLikes": [
+        "12",
+        "13"
+      ]
+    },
+    {
+      "id": 2,
+      "username": "dimpal",
+      "password": "dimpal123",
+      "postsLikes": []
+    },
+    {
+      "id": 3,
+      "username": "sandy",
+      "password": "sandy123",
+      "postsLikes": [
+        "12"
+      ]
+    },
+    {
+      "id": 4,
+      "username": "madhur",
+      "password": "madhur123",
+      "postsLikes": [
+        "14"
+      ]
+    },
+    {
+      "id": 123,
+      "username": "hridan",
+      "password": "hridan123",
+      "postsLikes": []
+    }
+  ],
+  "posts": [
+    {
+      "id": "12",
+      "image": "http://lorempixel.com/400/300/",
+      "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "author": 1
+    },
+    {
+      "id": "13",
+      "image": "http://lorempixel.com/400/290/",
+      "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ev",
+      "author": 123
+    },
+    {
+      "id": "14",
+      "image": "http://lorempixel.com/400/190/",
+      "desc": "Ek aur post.. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ev",
+      "author": 123
+    }
+  ]
+}
