@@ -21,7 +21,7 @@ export default class AddNewPost extends React.Component {
     }
     const url = 'http://localhost:3000/posts/'
     axios.post(url, newPost)
-      .then(res => console.log('res:', res))
+      .then(res => console.log('successfully posted a new post', res))
       .catch(err => console.log('err:', err))
   }
 
@@ -46,6 +46,5 @@ export default class AddNewPost extends React.Component {
   }
 
   componentDidMount = () => {
-    console.log('this.props.navigation:', this.props.navigation)
   }
 }

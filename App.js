@@ -34,9 +34,12 @@ class App extends React.Component {
     // get current used id from async storage
     const url = `http://localhost:3000/users/${currentUserId}`
     axios.get(url).then(
-      res => this.setState({
-        currentUser: res.data
-      })
+      res => {
+        console.log('res within current user:', res.data)
+        this.setState({
+          currentUser: res.data
+        })
+      }
     ).catch(err => console.log('err:', err))
 
   }

@@ -2,21 +2,29 @@
   "users": [
     {
       "id": 1,
-      "username": "manas",
-      "password": "manas123",
-      "postsLikes": [
-        "12",
-        "13"
-      ]
+      "username": "Admin",
+      "password": "admin123",
+      "postsLikes": []
     },
     {
       "id": 2,
+      "username": "manas",
+      "password": "manas123",
+      "postsLikes": [
+        "14",
+        "12",
+        "13",
+        "Tue Dec 25 2018 22:38:18 GMT+0530 (India Standard Time)3"
+      ]
+    },
+    {
+      "id": 3,
       "username": "dimpal",
       "password": "dimpal123",
       "postsLikes": []
     },
     {
-      "id": 3,
+      "id": 4,
       "username": "sandy",
       "password": "sandy123",
       "postsLikes": [
@@ -24,7 +32,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": 5,
       "username": "madhur",
       "password": "madhur123",
       "postsLikes": [
@@ -55,7 +63,7 @@
       "id": "14",
       "image": "http://lorempixel.com/400/190/",
       "desc": "Ek aur post.. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ev",
-      "author": 123
+      "author": 5
     },
     {
       "id": "Tue Dec 25 2018 22:38:18 GMT+0530 (India Standard Time)3",
