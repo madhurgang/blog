@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text } from 'react-native'
 import { Button, TextInput } from 'react-native-paper';
-import { findInList } from './helpers/helpers';
+import { findInList, saveDataToLocal, getDataFromLocal } from './helpers/helpers';
 import axios from 'axios'
 
 export default class Auth extends React.Component {
@@ -27,8 +27,12 @@ export default class Auth extends React.Component {
     }
     console.log('this.state:', this.state)
     const found = findInList(toBeFound, this.state.userList)
-    if (found)
-      this.props.navigation.navigate('Home', { loggedInUser: found.id })
+    if (found) {
+      // save found object to loal storage
+      saveDataToLocal('user', found)
+      this.props.navigation.navigate('Core')
+    }
+
   }
 
   render() {
@@ -52,12 +56,21 @@ export default class Auth extends React.Component {
     );
   }
 
-  componentDidMount = () => {
-    axios.get('http://localhost:3000/users')
-      .then(res => {
-        this.setState({ userList: res.data })
-      })
-      .catch(err => alert(err))
+  componentDidMount = async () => {
+    // if user exist in local
+    // navugate to core
+    const foundUser = await getDataFromLocal('user')
+    if (foundUser) {
+      this.props.navigation.navigate('Core')
+    }
+    else {
+      axios.get('http://localhost:3000/users')
+        .then(res => {
+          this.setState({ userList: res.data })
+        })
+        .catch(err => alert(err))
+    }
+
   }
 
 }

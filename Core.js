@@ -1,10 +1,9 @@
 import React from 'react';
-import { Appbar, FAB, Button } from 'react-native-paper'
+import { Appbar, FAB, Button, Searchbar } from 'react-native-paper'
 import { View, Text, FlatList, StyleSheet } from 'react-native'
 import axios from 'axios'
 import PostCard from './comp/PostCard';
-
-const currentUserId = 2
+import { getDataFromLocal, removeDataFromLocal } from './helpers/helpers';
 
 export default class Core extends React.Component {
 
@@ -15,7 +14,7 @@ export default class Core extends React.Component {
   state = {
     posts: [],
     currentUser: {},
-    currentUserId: null
+    firstQuery: ''
   }
 
   fetchPosts = () => {
@@ -29,18 +28,9 @@ export default class Core extends React.Component {
       .catch(err => console.log('err:', err))
   }
 
-  fetchCurrentUserDetails = () => {
-    // get current used id from async storage
-    const url = `http://localhost:3000/users/${currentUserId}`
-    axios.get(url).then(
-      res => {
-        console.log('res within current user:', res.data)
-        this.setState({
-          currentUser: res.data
-        })
-      }
-    ).catch(err => console.log('err:', err))
-
+  handleLogout = async () => {
+    await removeDataFromLocal('user')
+    this.props.navigation.navigate('Auth')
   }
 
   render() {
@@ -50,13 +40,17 @@ export default class Core extends React.Component {
     else {
       return (
         <View style={{ flex: 1 }}>
-          <Appbar>
-            <Appbar.Header><Text style={{ color: 'white' }}>My Special Blog</Text></Appbar.Header>
-          </Appbar>
+
+          <Searchbar
+            style={{ color: 'black' }}
+            placeholder="Search"
+            onChangeText={query => { this.setState({ firstQuery: query }); }}
+            value={this.state.firstQuery}
+          />
 
           <FlatList
             style={{ flex: 1 }}
-            data={this.state.posts}
+            data={this.state.posts.filter(post => post.title.includes(this.state.firstQuery))}
             keyExtractor={(item, index) => item.id}
             renderItem={({ item }) =>
               <PostCard currentUser={this.state.currentUser} singlePost={item} />}
@@ -66,20 +60,20 @@ export default class Core extends React.Component {
             small
             style={styles.fab}
             icon="add"
-            onPress={() => this.props.navigation.navigate('NewPost', { currentUserId: currentUserId })}
+            onPress={() => this.props.navigation.navigate('NewPost', { currentUserId: this.state.currentUser.id })}
           />
-          <Button onPress={() => this.props.navigation.navigate('Auth')}>Logout</Button>
+          <Button onPress={() => this.handleLogout()}>Logout</Button>
         </View>
       );
     }
 
   }
 
-  componentDidMount = () => {
+  componentDidMount = async () => {
     this.fetchPosts()
-    this.fetchCurrentUserDetails()
+    const foundUser = await getDataFromLocal('user')
     this.setState({
-      currentUserId: this.props.navigation.state.params.loggedInUser
+      currentUser: foundUser
     })
   }
 }

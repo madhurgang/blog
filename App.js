@@ -4,7 +4,7 @@ import Core from './Core';
 import Auth from './Auth';
 
 const AppNavigator = createStackNavigator({
-  Home: Core,
+  Core: Core,
   NewPost: AddNewPost
 })
 

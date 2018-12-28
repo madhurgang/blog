@@ -8,6 +8,7 @@ export default class AddNewPost extends React.Component {
   state = {
     desc: '',
     image: '',
+    title: '',
     newPost: {}
   }
 
@@ -17,6 +18,7 @@ export default class AddNewPost extends React.Component {
       id: newId,
       image: this.state.image,
       desc: this.state.desc,
+      title: this.state.title,
       author: this.props.navigation.state.params.currentUserId
     }
     const url = 'http://localhost:3000/posts/'
@@ -28,6 +30,11 @@ export default class AddNewPost extends React.Component {
   render() {
     return (
       <View style={{ marginTop: 40, marginStart: 2, marginEnd: 2 }}>
+        <TextInput
+          label='Title'
+          value={this.state.title}
+          onChangeText={title => this.setState({ title })}
+        />
         <TextInput
           label='Image Url'
           value={this.state.image}

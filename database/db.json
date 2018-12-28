@@ -8,22 +8,23 @@
     },
     {
       "id": 2,
-      "username": "manas",
+      "username": "Manas",
       "password": "manas123",
       "postsLikes": [
         "13",
-        "Tue Dec 25 2018 22:38:18 GMT+0530 (India Standard Time)3"
+        "Tue Dec 25 2018 22:38:18 GMT+0530 (India Standard Time)3",
+        "Thu Dec 27 2018 23:03:13 GMT+0530 (India Standard Time)2"
       ]
     },
     {
       "id": 3,
-      "username": "dimpal",
+      "username": "Dimpal",
       "password": "dimpal123",
       "postsLikes": []
     },
     {
       "id": 4,
-      "username": "sandy",
+      "username": "Sandy",
       "password": "sandy123",
       "postsLikes": [
         "12"
@@ -31,7 +32,7 @@
     },
     {
       "id": 5,
-      "username": "madhur",
+      "username": "Madhur",
       "password": "madhur123",
       "postsLikes": [
         "14"
@@ -39,7 +40,7 @@
     },
     {
       "id": 123,
-      "username": "hridan",
+      "username": "Hridan",
       "password": "hridan123",
       "postsLikes": []
     }
@@ -47,27 +48,45 @@
   "posts": [
     {
       "id": "12",
+      "title": "tum ko bhula na paenge",
       "image": "http://lorempixel.com/400/300/",
-      "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "desc": "आगही दाम-ए-शुनीदन जिस क़दर चाहे बिछाए मुद्दआ अन्क़ा है अपने आलम-ए-तक़रीर का ",
       "author": 1
     },
     {
       "id": "13",
+      "title": "bahut shukriya",
       "image": "http://lorempixel.com/400/290/",
       "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ev",
       "author": 123
     },
     {
       "id": "14",
+      "title": "badi maherbani",
       "image": "http://lorempixel.com/400/190/",
       "desc": "Ek aur post.. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ev",
       "author": 5
     },
     {
       "id": "Tue Dec 25 2018 22:38:18 GMT+0530 (India Standard Time)3",
+      "title": "meri zindagi me",
       "image": "http://lorempixel.com/200/100/",
       "desc": "Bahoooooot bad I description nah I hai ",
       "author": 3
+    },
+    {
+      "id": "Thu Dec 27 2018 23:03:13 GMT+0530 (India Standard Time)2",
+      "title": "hazoor aap aaye",
+      "image": "http://placehold.it/200",
+      "desc": "There hi year kya it I bad I beat ho GAO!!",
+      "author": 2
+    },
+    {
+      "id": "Fri Dec 28 2018 10:18:40 GMT+0530 (India Standard Time)2",
+      "image": "https://img.timesnownews.com/story/1528009840-sanju_song_sunidhi.jpg?d=600x450",
+      "desc": "Main badhiya tu bhi badhiya\nShaadi kar le saawariya\nPhootengi phir phuljhadiyan\nBadhiya badhiya\n\nMain badhiya tu bhi badhiya\nPar main azad hoon chidiya\nRakh tu apni phuljhadiyan\nBadhiya badhiya\n\n\nRead more at: http://www.lyricsbell.com/main-badhiya-tu-bhi-badhiya-sanju/",
+      "title": "Mai badiyan tu bhi badhiyan",
+      "author": 2
     }
   ]
 }

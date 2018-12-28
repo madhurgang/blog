@@ -65,7 +65,8 @@ export default class PostCard extends React.Component {
       return (
         <Card>
           <Card.Content>
-            <Title>{this.state.authorInfo.username}</Title>
+            <Title>{this.props.singlePost.title}</Title>
+            <Paragraph>Created By: {this.state.authorInfo.username}</Paragraph>
           </Card.Content>
           <Card.Cover source={{ uri: this.props.singlePost.image }} />
           <Card.Content>
