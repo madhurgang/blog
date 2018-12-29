@@ -79,7 +79,7 @@ export default class PostCard extends React.Component {
         </Card>
       )
     else
-      return <Text>Loading Post...</Text>
+      return null
   }
 
   componentDidMount = async () => {

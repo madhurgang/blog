@@ -87,6 +87,69 @@
       "desc": "Main badhiya tu bhi badhiya\nShaadi kar le saawariya\nPhootengi phir phuljhadiyan\nBadhiya badhiya\n\nMain badhiya tu bhi badhiya\nPar main azad hoon chidiya\nRakh tu apni phuljhadiyan\nBadhiya badhiya\n\n\nRead more at: http://www.lyricsbell.com/main-badhiya-tu-bhi-badhiya-sanju/",
       "title": "Mai badiyan tu bhi badhiyan",
       "author": 2
+    },
+    {
+      "id": "17",
+      "title": "tum ho meri kiran",
+      "image": "http://lorempixel.com/400/300/",
+      "desc": "आगही दाम-ए-शुनीदन जिस क़दर चाहे बिछाए मुद्दआ अन्क़ा है अपने आलम-ए-तक़रीर का ",
+      "author": 1
+    },
+    {
+      "id": "18",
+      "title": "hum apke hai dewane",
+      "image": "http://lorempixel.com/400/290/",
+      "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ev",
+      "author": 123
+    },
+    {
+      "id": "19",
+      "title": "dhnyawad",
+      "image": "http://lorempixel.com/400/190/",
+      "desc": "Ek aur post.. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ev",
+      "author": 5
+    },
+    {
+      "id": "20",
+      "title": "chand sitare le aaun",
+      "image": "http://lorempixel.com/400/300/",
+      "desc": "आगही दाम-ए-शुनीदन जिस क़दर चाहे बिछाए मुद्दआ अन्क़ा है अपने आलम-ए-तक़रीर का ",
+      "author": 1
+    },
+    {
+      "id": "21",
+      "title": "hum tum ek kamre mein band ho",
+      "image": "http://lorempixel.com/400/290/",
+      "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ev",
+      "author": 123
+    },
+    {
+      "id": "22",
+      "title": "chand taare todh laun",
+      "image": "http://lorempixel.com/400/190/",
+      "desc": "Ek aur post.. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ev",
+      "author": 5
+    },
+    {
+      "id": "23",
+      "title": "kamal karte ho janab",
+      "image": "http://lorempixel.com/400/300/",
+      "desc": "आगही दाम-ए-शुनीदन जिस क़दर चाहे बिछाए मुद्दआ अन्क़ा है अपने आलम-ए-तक़रीर का ",
+      "author": 1
+    },
+    {
+      "id": "24",
+      "title": "tere dedar hua",
+      "image": "http://lorempixel.com/400/290/",
+      "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ev",
+      "author": 123
+    },
+    {
+      "id": "25",
+      "title": "tuje bhula diya",
+      "image": "http://lorempixel.com/400/190/",
+      "desc": "Ek aur post.. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ev",
+      "author": 5
     }
   ]
 }

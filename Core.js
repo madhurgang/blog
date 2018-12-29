@@ -1,9 +1,10 @@
 import React from 'react';
 import { Appbar, FAB, Button, Searchbar } from 'react-native-paper'
-import { View, Text, FlatList, StyleSheet } from 'react-native'
+import { View, Text, FlatList, StyleSheet, ActivityIndicator } from 'react-native'
 import axios from 'axios'
 import PostCard from './comp/PostCard';
 import { getDataFromLocal, removeDataFromLocal } from './helpers/helpers';
+
 
 export default class Core extends React.Component {
 
@@ -14,18 +15,36 @@ export default class Core extends React.Component {
   state = {
     posts: [],
     currentUser: {},
-    firstQuery: ''
+    firstQuery: '',
+    currentPage: 1,
+    pageLimit: 5,
+    endOflistNahiHua: true
   }
 
   fetchPosts = () => {
-    const url = 'http://localhost:3000/posts'
+    const url = `http://localhost:3000/posts?_page=${this.state.currentPage}&_limit=${this.state.pageLimit}`
     axios.get(url)
       .then(res => {
+        console.log('res:', res)
         this.setState({
-          posts: res.data
+          posts: [...this.state.posts, ...res.data],
+          totalCount: 15
         })
       })
       .catch(err => console.log('err:', err))
+  }
+
+  loadNextPage = () => {
+    if (this.state.currentPage * this.state.pageLimit < (this.state.totalCount - this.state.pageLimit)) {
+      console.log('andar aaya')
+      this.setState({
+        currentPage: this.state.currentPage + 1
+      }, () => this.fetchPosts())
+    }
+    else {
+      console.log('bahar aa gaya')
+      this.setState({ endOflistNahiHua: false })
+    }
   }
 
   handleLogout = async () => {
@@ -35,12 +54,11 @@ export default class Core extends React.Component {
 
   render() {
     if (typeof (this.state.currentUser.id) === 'undefined') {
-      return <Text>Loading ...</Text>
+      return null
     }
     else {
       return (
         <View style={{ flex: 1 }}>
-
           <Searchbar
             style={{ color: 'black' }}
             placeholder="Search"
@@ -50,8 +68,14 @@ export default class Core extends React.Component {
 
           <FlatList
             style={{ flex: 1 }}
-            data={this.state.posts.filter(post => post.title.includes(this.state.firstQuery))}
+            onEndReached={() => this.loadNextPage()}
+            data={this.state.posts}
             keyExtractor={(item, index) => item.id}
+            ListFooterComponent={
+              this.state.endOflistNahiHua
+                ? <ActivityIndicator size="large" color="#0000ff" />
+                : null
+            }
             renderItem={({ item }) =>
               <PostCard currentUser={this.state.currentUser} singlePost={item} />}
           />
