@@ -25,7 +25,6 @@ export default class Core extends React.Component {
     const url = `http://localhost:3000/posts?_page=${this.state.currentPage}&_limit=${this.state.pageLimit}`
     axios.get(url)
       .then(res => {
-        console.log('res:', res)
         this.setState({
           posts: [...this.state.posts, ...res.data],
           totalCount: 15
@@ -35,14 +34,12 @@ export default class Core extends React.Component {
   }
 
   loadNextPage = () => {
-    if (this.state.currentPage * this.state.pageLimit < (this.state.totalCount - this.state.pageLimit)) {
-      console.log('andar aaya')
+    if ((this.state.currentPage * this.state.pageLimit) < (this.state.totalCount)) {
       this.setState({
         currentPage: this.state.currentPage + 1
       }, () => this.fetchPosts())
     }
     else {
-      console.log('bahar aa gaya')
       this.setState({ endOflistNahiHua: false })
     }
   }
@@ -77,7 +74,11 @@ export default class Core extends React.Component {
                 : null
             }
             renderItem={({ item }) =>
-              <PostCard currentUser={this.state.currentUser} singlePost={item} />}
+              <PostCard
+                currentUser={this.state.currentUser}
+                nav={this.props.navigation}
+                singlePost={item}
+              />}
           />
 
           <FAB

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card, Title, Paragraph } from 'react-native-paper'
 import { Ionicons } from '@expo/vector-icons';
-import { Text } from 'react-native'
+import { Text, TouchableHighlight } from 'react-native'
 import axios from 'axios'
 
 export default class PostCard extends React.Component {
@@ -66,7 +66,17 @@ export default class PostCard extends React.Component {
         <Card>
           <Card.Content>
             <Title>{this.props.singlePost.title}</Title>
-            <Paragraph>Created By: {this.state.authorInfo.username}</Paragraph>
+            <TouchableHighlight underlayColor='green'
+              onPress={() =>
+                this.props.nav.navigate('Author', {
+                  authorId: this.props.singlePost.author,
+                  authorName: this.state.authorInfo.username
+                }
+                )}>
+              <Paragraph>Created By:
+                <Text style={{ color: 'grey', fontWeight: 'bold' }}>{' ' + this.state.authorInfo.username}</Text>
+              </Paragraph>
+            </TouchableHighlight>
           </Card.Content>
           <Card.Cover source={{ uri: this.props.singlePost.image }} />
           <Card.Content>

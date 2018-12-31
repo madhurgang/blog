@@ -2,10 +2,12 @@ import { createStackNavigator, createAppContainer, createSwitchNavigator } from 
 import AddNewPost from './screens/AddNewPost';
 import Core from './Core';
 import Auth from './Auth';
+import Author from './screens/Author';
 
 const AppNavigator = createStackNavigator({
   Core: Core,
-  NewPost: AddNewPost
+  NewPost: AddNewPost,
+  Author: Author
 })
 
 const SwitchNav = createSwitchNavigator({
