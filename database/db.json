@@ -10,12 +10,7 @@
       "id": 2,
       "username": "Manas",
       "password": "manas123",
-      "postsLikes": [
-        "13",
-        "Tue Dec 25 2018 22:38:18 GMT+0530 (India Standard Time)3",
-        "Thu Dec 27 2018 23:03:13 GMT+0530 (India Standard Time)2",
-        "12"
-      ]
+      "postsLikes": []
     },
     {
       "id": 3,
@@ -27,16 +22,14 @@
       "id": 4,
       "username": "Sandy",
       "password": "sandy123",
-      "postsLikes": [
-        "12"
-      ]
+      "postsLikes": []
     },
     {
       "id": 5,
       "username": "Madhur",
       "password": "madhur123",
       "postsLikes": [
-        "14"
+        "12"
       ]
     },
     {
@@ -52,105 +45,173 @@
       "title": "tum ko bhula na paenge",
       "image": "http://lorempixel.com/400/300/",
       "desc": "आगही दाम-ए-शुनीदन जिस क़दर चाहे बिछाए मुद्दआ अन्क़ा है अपने आलम-ए-तक़रीर का ",
-      "author": 1
+      "author": 1,
+      "likeCount": 1,
+      "category": "16"
     },
     {
       "id": "13",
       "title": "bahut shukriya",
       "image": "http://lorempixel.com/400/290/",
       "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ev",
-      "author": 123
+      "author": 123,
+      "likeCount": 0,
+      "category": "13"
     },
     {
       "id": "14",
       "title": "badi maherbani",
       "image": "http://lorempixel.com/400/190/",
       "desc": "Ek aur post.. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ev",
-      "author": 5
+      "author": 5,
+      "likeCount": 0,
+      "category": "15"
     },
     {
       "id": "Tue Dec 25 2018 22:38:18 GMT+0530 (India Standard Time)3",
       "title": "meri zindagi me",
       "image": "http://lorempixel.com/200/100/",
       "desc": "Bahoooooot bad I description nah I hai ",
-      "author": 3
+      "author": 3,
+      "likeCount": 0,
+      "category": "12"
     },
     {
       "id": "Thu Dec 27 2018 23:03:13 GMT+0530 (India Standard Time)2",
       "title": "hazoor aap aaye",
       "image": "http://placehold.it/200",
       "desc": "There hi year kya it I bad I beat ho GAO!!",
-      "author": 2
+      "author": 2,
+      "likeCount": 0,
+      "category": "17"
     },
     {
       "id": "Fri Dec 28 2018 10:18:40 GMT+0530 (India Standard Time)2",
       "image": "https://img.timesnownews.com/story/1528009840-sanju_song_sunidhi.jpg?d=600x450",
       "desc": "Main badhiya tu bhi badhiya\nShaadi kar le saawariya\nPhootengi phir phuljhadiyan\nBadhiya badhiya\n\nMain badhiya tu bhi badhiya\nPar main azad hoon chidiya\nRakh tu apni phuljhadiyan\nBadhiya badhiya\n\n\nRead more at: http://www.lyricsbell.com/main-badhiya-tu-bhi-badhiya-sanju/",
       "title": "Mai badiyan tu bhi badhiyan",
-      "author": 2
+      "author": 2,
+      "likeCount": 0,
+      "category": "16"
     },
     {
       "id": "17",
       "title": "tum ho meri kiran",
       "image": "http://lorempixel.com/400/300/",
       "desc": "आगही दाम-ए-शुनीदन जिस क़दर चाहे बिछाए मुद्दआ अन्क़ा है अपने आलम-ए-तक़रीर का ",
-      "author": 1
+      "author": 1,
+      "likeCount": 0,
+      "category": "15"
     },
     {
       "id": "18",
       "title": "hum apke hai dewane",
       "image": "http://lorempixel.com/400/290/",
       "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ev",
-      "author": 123
+      "author": 123,
+      "likeCount": 0,
+      "category": "15"
     },
     {
       "id": "19",
       "title": "dhnyawad",
       "image": "http://lorempixel.com/400/190/",
       "desc": "Ek aur post.. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ev",
-      "author": 5
+      "author": 5,
+      "likeCount": 0,
+      "category": "15"
     },
     {
       "id": "20",
       "title": "chand sitare le aaun",
       "image": "http://lorempixel.com/400/300/",
       "desc": "आगही दाम-ए-शुनीदन जिस क़दर चाहे बिछाए मुद्दआ अन्क़ा है अपने आलम-ए-तक़रीर का ",
-      "author": 1
+      "author": 1,
+      "likeCount": 0,
+      "category": "15"
     },
     {
       "id": "21",
       "title": "hum tum ek kamre mein band ho",
       "image": "http://lorempixel.com/400/290/",
       "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ev",
-      "author": 123
+      "author": 123,
+      "likeCount": 0,
+      "category": "15"
     },
     {
       "id": "22",
       "title": "chand taare todh laun",
       "image": "http://lorempixel.com/400/190/",
       "desc": "Ek aur post.. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ev",
-      "author": 5
+      "author": 5,
+      "likeCount": 0,
+      "category": "12"
     },
     {
       "id": "23",
       "title": "kamal karte ho janab",
       "image": "http://lorempixel.com/400/300/",
       "desc": "आगही दाम-ए-शुनीदन जिस क़दर चाहे बिछाए मुद्दआ अन्क़ा है अपने आलम-ए-तक़रीर का ",
-      "author": 1
+      "author": 1,
+      "likeCount": 0,
+      "category": "14"
     },
     {
       "id": "24",
       "title": "tere dedar hua",
       "image": "http://lorempixel.com/400/290/",
       "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ev",
-      "author": 123
+      "author": 123,
+      "likeCount": 0,
+      "category": "13"
     },
     {
       "id": "25",
       "title": "tuje bhula diya",
       "image": "http://lorempixel.com/400/190/",
       "desc": "Ek aur post.. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ev",
-      "author": 5
+      "author": 5,
+      "likeCount": 0,
+      "category": "12"
+    },
+    {
+      "id": "Wed Jan 02 2019 21:44:36 GMT+0530 (IST)2",
+      "image": "",
+      "desc": "",
+      "title": "",
+      "category": "js",
+      "author": 2
+    },
+    {
+      "id": "Wed Jan 02 2019 21:56:39 GMT+0530 (IST)2",
+      "image": "",
+      "desc": "",
+      "title": "",
+      "category": "",
+      "author": 2
+    }
+  ],
+  "categories": [
+    {
+      "id": "12",
+      "name": "health"
+    },
+    {
+      "id": "13",
+      "name": "lifestyle"
+    },
+    {
+      "id": "14",
+      "name": "motivation"
+    },
+    {
+      "id": "15",
+      "name": "fitness"
+    },
+    {
+      "id": "16",
+      "name": "wealth"
     }
   ]
 }

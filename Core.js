@@ -97,9 +97,14 @@ export default class Core extends React.Component {
   componentDidMount = async () => {
     this.fetchPosts()
     const foundUser = await getDataFromLocal('user')
-    this.setState({
-      currentUser: foundUser
-    })
+    const foundUserId = foundUser.id
+    axios.get(`http://localhost:3000/users/${foundUserId}`)
+      .then(foundUser =>
+        this.setState({
+          currentUser: foundUser.data
+        })
+      )
+      .catch(err => alert(err))
   }
 }
 
